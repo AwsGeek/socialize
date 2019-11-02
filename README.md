@@ -29,3 +29,17 @@ api_config = aws_cloudfront.SourceConfiguration(
     custom_origin_source = api_origin,
     origin_path = "/prod")
 ```
+
+To build (this is what I do in a Cloud 9 env):
+```
+npm install -g aws-cdk
+git clone 
+cd skamokawa
+cd layers/boto_layer/python 
+pip install -r requirements.txt -t .
+cd ../../layers/pystache_layer/python 
+pip install -r requirements.txt -t .
+cd ../..
+pip install -r requirements.txt
+cdk deploy
+```

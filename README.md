@@ -30,7 +30,7 @@ api_config = aws_cloudfront.SourceConfiguration(
     origin_path = "/prod")
 ```
 
-To build (this is what I do in a Cloud 9 env):
+## To build (this is what I do in a Cloud 9 env):
 ```
 npm install -g aws-cdk
 git clone 

@@ -15,3 +15,9 @@ Example DynamoDB table entry:
   "title": "2019 AWS Summit (Bahrain) - AWS Compute and Storage Fundamentals"
 }
 ```
+
+Referenced like this via API Gateway:
+```
+https://m8zzwx390d.execute-api.us-west-2.amazonaws.com/prod/notes/AWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals
+```
+(replace with your API Gateway details)

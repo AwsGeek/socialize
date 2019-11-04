@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns= "//www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+
+  <title>{{title}}</title>
+
+  <meta name="description" content="{{description}}"/>
+  <link rel="canonical" href="{{{url}}}"/>
+
+  <meta property="og:image" content="{{{image}}}"/>
+  <meta property="og:title" content="{{title}}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{{url}}}"/>
+  <meta property="og:description" content="{{description}}"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="{{title}}"/>
+  <meta name="twitter:description" content="{{description}}"/>
+  <meta name="twitter:image" content="{{{image}}}"/>
+
+  <style>
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  .imgbox {
+      display: grid;
+      height: 100%;
+  }
+  .center-fit {
+      max-width: 100%;
+      max-height: 100vh;
+      margin: auto;
+  }
+  </style>
+</head>
+<body>
+  <div class="imgbox">
+    <img class="center-fit" src={{{image}}}>
+  </div>
+</body>
+</html>

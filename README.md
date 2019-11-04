@@ -1,26 +1,13 @@
 
 # Skamokawa
 
-A simple serverless back-end to dynamically generate social media friendly HTML wrappers for @awsgeek notes that uses only AWS Lambda, Amazon API Gateway & Amazon DynamoDB
-
-Example DynamoDB table entry:
-```
-{
-  "author": "<a href=\"https://twitter.com/awsgeek\">@awsgeek</a> (Jerry Hargrove)",
-  "event": "2019 AWS Summit (Bahrain)",
-  "id": "AWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals",
-  "image": "https://www.awsgeek.com/images/AWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals.jpg",
-  "link": "https://www.awsgeek.com/notes/AWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals",
-  "session": "AWS Compute and Storage Fundamentals",
-  "title": "2019 AWS Summit (Bahrain) - AWS Compute and Storage Fundamentals"
-}
-```
+A simple serverless back-end to dynamically generate social media friendly HTML wrappers for @awsgeek notes using AWS Lambda and Amazon API Gateway:
 
 Referenced like this via API Gateway:
 ```
-https://m8zzwx390d.execute-api.us-west-2.amazonaws.com/prod/notes/AWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals
+https://m8zzwx390d.execute-api.us-west-2.amazonaws.com/prod/socialize??image=https%3A%2F%2Fwww.awsgeek.com%2Fimages%2FAWS-Summit-2019-Bahrain-AWS-Compute-and-Storage-Fundamentals.jpg&title=AWS%20Compute%20and%20Storage%20Fundamentals
 ```
-(replace with your API Gateway details)
+(replace with your API Gateway details and URL encoded parameters)
 
 I use this on awsgeek.com as a Cloudfront custom origin that maps "/prod" to "notes/*". In "CDK speak":
 ```

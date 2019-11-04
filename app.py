@@ -2,10 +2,10 @@
 
 from aws_cdk import core
 
-from skamokawa.skamokawa_stack import SkamokawaStack
+from socialize.socialize_stack import SocializeStack
 
 
 app = core.App()
-SkamokawaStack(app, "skamokawa")
+SocializeStack(app, "socialize")
 
 app.synth()

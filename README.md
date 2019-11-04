@@ -1,5 +1,5 @@
 
-# Skamokawa
+# Socialize
 
 A simple serverless back-end to dynamically generate social media friendly HTML wrappers for @awsgeek notes that uses only AWS Lambda, Amazon API Gateway & Amazon DynamoDB
 
@@ -34,7 +34,7 @@ api_config = aws_cloudfront.SourceConfiguration(
 ```
 npm install -g aws-cdk
 git clone 
-cd skamokawa
+cd socialize
 cd layers/boto_layer/python 
 pip install -r requirements.txt -t .
 cd ../../layers/pystache_layer/python 

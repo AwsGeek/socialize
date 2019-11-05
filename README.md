@@ -17,16 +17,16 @@ api_config = aws_cloudfront.SourceConfiguration(
     origin_path = "/prod")
 ```
 
-## To build (this is what I do in a Cloud 9 env):
+## To build (the steps I follow in my Cloud 9 environment):
 ```
 npm install -g aws-cdk
-git clone 
-cd socialize
-cd layers/boto_layer/python 
+git clone https://github.com/AwsGeek/socialize.git
+cd socialize/
+python3 -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt 
+cd layers/pystache_layer/python/
 pip install -r requirements.txt -t .
-cd ../../layers/pystache_layer/python 
-pip install -r requirements.txt -t .
-cd ../..
-pip install -r requirements.txt
+cd ../../..
 cdk deploy
 ```
